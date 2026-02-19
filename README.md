@@ -6,7 +6,7 @@
     <br />
   </p>
   <br />
-    <a href="https://github.com/alexrrc18/Focus-Pomodoro">
+    <a href="https://alexandruc.com">
     <img src="https://cdn.alexandruc.com/portfolio/projects/focus/focus.png" alt="thumbnail">
   </a>
 </div>
