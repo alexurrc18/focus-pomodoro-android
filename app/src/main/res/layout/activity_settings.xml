@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SettingsActivity">
+
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="14dp"
+        android:layout_marginTop="5dp"
+        android:paddingVertical="5dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="42dp"
+            android:minWidth="42dp"
+            android:backgroundTint="?attr/colorSurface"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            app:icon="@drawable/icon_x"
+            android:layout_marginEnd="5dp"
+            app:iconTint="?attr/colorOnSurface"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textAppearance="@style/TextStyle.Header5"
+            android:textColor="?attr/colorText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingHorizontal="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/TextStyle.Header5"
+                android:textColor="?attr/colorOnSurface" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/notificationsSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:thumb="@drawable/switch_thumb"
+                app:track="@drawable/switch_track"
+                app:trackTint="@null"
+                app:thumbTint="@null" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vibration"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/TextStyle.Header5"
+                android:textColor="?attr/colorOnSurface" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/vibrationSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:thumb="@drawable/switch_thumb"
+                app:track="@drawable/switch_track"
+                app:trackTint="@null"
+                app:thumbTint="@null" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/block_social_media"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/TextStyle.Header5"
+                android:textColor="?attr/colorOnSurface" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/socialMediaSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:thumb="@drawable/switch_thumb"
+                app:track="@drawable/switch_track"
+                app:trackTint="@null"
+                app:thumbTint="@null" />
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Focus duration"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/TextStyle.Header5"
+                android:textColor="?attr/colorOnSurface" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/focusMenu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+
+                app:boxStrokeColor="?attr/textOnDarkButton"
+                app:boxStrokeWidth="2dp"
+
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/focusAutoCompleteMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:padding="0dp"
+                    android:textAppearance="@style/TextStyle.Header6"
+                    android:textColor="?attr/colorText"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/break_duration"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/TextStyle.Header5"
+                android:textColor="?attr/colorOnSurface" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/breakMenu"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+
+                app:boxStrokeColor="?attr/textOnDarkButton"
+                app:boxStrokeWidth="2dp"
+
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxCornerRadiusTopEnd="10dp"
+                app:boxCornerRadiusBottomStart="10dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/breakAutoCompleteMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    android:padding="0dp"
+                    android:textAppearance="@style/TextStyle.Header6"
+                    android:textColor="?attr/colorText"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

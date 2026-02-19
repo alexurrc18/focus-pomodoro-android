@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Focus</string>
+    <string name="open_settings">Open settings.</string>
+    <string name="add_a_task">Add a task</string>
+    <string name="tasks_list">Tasks list:</string>
+    <string name="cancel">Cancel</string>
+    <string name="start">Start</string>
+    <string name="start_the_timer">Start the timer!</string>
+    <string name="time_for_a_break">Time for a break!</string>
+    <string name="time_to_focus">Time to focus:</string>
+    <string name="take_a_break">Take a break:</string>
+    <string name="settings">Settings</string>
+    <string name="block_social_media">Block social media</string>
+    <string name="notifications">Notifications</string>
+    <string name="break_duration">Break duration</string>
+    <string name="streak_icon">Streak icon</string>
+    <string name="undefined">undefined</string>
+    <string name="skip">Skip</string>
+    <string name="new_task">New task</string>
+    <string name="save">Save</string>
+    <string name="vibration">Vibration</string>
+    <string name="accessibility_permission_title">Accessibility Permission Required</string>
+    <string name="accessibility_permission_description">To help you stay focused, this app needs to use the Accessibility Service.\n\nWhat we do: The app detects which application is currently open on your screen.\n\nWhy we do it: If you open a social media app during an active Focus timer, the Accessibility Service will automatically close the app.\n\nWe do not collect, store, share, or transmit any of your personal data, screen content, or typing history. The API is used strictly locally on your device for the app-blocking feature."</string>
+    <string name="accept">Accept</string>
+    <string name="break_time_title">Time to take a break!</string>
+    <string name="break_time_description">It\'s finally over. Break time!</string>
+    <string name="focus_time_title">Time to focus!</string>
+    <string name="focus_time_description">Break is over :(. Let\'s get back to work!</string>
+    <string name="block_app_title">Hey! You need to focus!</string>
+    <string name="block_app_description">You can check your socials once it\'s break time.</string>
+    <string name="focus">Focus</string>
+</resources>

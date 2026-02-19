@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="5dp">
+
+    <CheckBox
+        app:buttonTint="@null"
+        android:id="@+id/taskCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="0dp"
+        android:button="@drawable/checkbox"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/taskDescription"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextStyle.Header6"
+        android:text="@string/undefined"
+        android:layout_gravity="center_vertical"
+        android:textColor="?attr/colorText"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/deleteTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="42dp"
+        android:minWidth="42dp"
+        android:backgroundTint="@android:color/transparent"
+        style="@style/Widget.Material3.Button.IconButton.Filled"
+        app:icon="@drawable/icon_x"
+        app:iconSize="18dp"
+        app:iconTint="?attr/colorOnSurface"
+        />
+
+</LinearLayout>

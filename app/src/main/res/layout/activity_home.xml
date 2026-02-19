@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp" />
+
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.40">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/navBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/streakContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="42dp"
+                android:background="@drawable/bg_streak_badge"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingStart="12dp"
+                android:paddingEnd="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/icon_flame"
+                    app:tint="@color/yellow"
+                    android:layout_marginEnd="5dp"
+                    android:contentDescription="@string/streak_icon" />
+
+                <TextView
+                    android:id="@+id/streakBadgeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/undefined"
+                    android:textColor="@color/white"
+                    android:textAppearance="@style/TextStyle.Header6"
+                    android:layout_marginStart="2dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/soundEffectsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="42dp"
+                    android:minWidth="42dp"
+                    android:backgroundTint="?attr/colorSurface"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    app:icon="@drawable/icon_bell_slash"
+                    android:layout_marginEnd="5dp"
+                    app:iconTint="?attr/colorOnSurface" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/settingsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="42dp"
+                    android:minWidth="42dp"
+                    android:backgroundTint="?attr/colorSurface"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    app:icon="@drawable/icon_gear"
+                    app:iconTint="?attr/colorOnSurface" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/navBar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextStyle.Paragraph"
+                    android:textAlignment="center"
+                    android:text="@string/start_the_timer"
+                    android:textColor="?attr/colorText" />
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextStyle.Header1"
+                    android:text="@string/undefined"
+                    android:textColor="?attr/colorText"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/startTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="35dp"
+                    android:text="@string/start"
+                    android:textAppearance="@style/TextStyle.Header6"
+                    android:backgroundTint="@color/green"
+                    android:textColor="?attr/textOnDarkButton" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/taskSection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.60"
+            android:padding="16dp">
+
+            <TextView
+            android:id="@+id/tasksTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tasks_list"
+            android:textAppearance="@style/TextStyle.Header5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="10dp"
+            android:textColor="?attr/colorText"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tasksRecyclerView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/tasksTitle"
+                app:layout_constraintBottom_toTopOf="@id/addTask"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                tools:listitem="@layout/item_task"
+                android:background="@drawable/bg_tasks_border" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addTask"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/add_a_task"
+                android:textAppearance="@style/TextStyle.Header6"
+                android:textColor="?attr/textOnDarkButton"
+                app:cornerRadius="10dp"
+                android:backgroundTint="?attr/darkButton" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
